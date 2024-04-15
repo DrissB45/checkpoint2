@@ -22,10 +22,11 @@ export async function getCountryByCode(code: string): Promise<Country | null> {
   });
 }
 
-export async function getCountryByCodeContinent(codeContinent: string): Promise<Country | null> {
-  return Country.findOne({
+export async function getCountryByCodeContinent(codeContinent: string): Promise<Country[]> {
+  const countriesByContinent = await Country.find({
     where: { codeContinent: codeContinent },
   });
+  return countriesByContinent;
 }
 
 

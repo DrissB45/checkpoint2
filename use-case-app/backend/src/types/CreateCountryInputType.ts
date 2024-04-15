@@ -1,4 +1,3 @@
-import { IsString, Max, MaxLength } from "class-validator";
 import { Field, InputType, Int } from "type-graphql";
 
 @InputType()

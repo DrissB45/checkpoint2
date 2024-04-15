@@ -19,7 +19,7 @@ export class CountryResolver {
   }
 
   @Query(() => Country)
-  getCountryByCodeContinent(@Arg("codeContinent") codeContinent: string): Promise<Country | null> {
+  getCountryByCodeContinent(@Arg("codeContinent") codeContinent: string): Promise<Country[]> {
     return CountryService.getCountryByCodeContinent(codeContinent);
   }
   
